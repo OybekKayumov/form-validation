@@ -1,6 +1,6 @@
 const form = document.getElementById('form');
-const pwd1El = document.getElementById('pwd1');
-const pwd2El = document.getElementById('pwd2');
+const pwd1El = document.getElementById('password1');
+const pwd2El = document.getElementById('password2');
 const messageContainer = document.querySelector('.message-container');
 const message = document.getElementById('message');
 
@@ -47,7 +47,7 @@ function storeFormData() {
     phone: form.phone.value,
     email: form.email.value,
     website: form.website.value,
-    password: form.password.value,
+    // password: form.password.value,
   };
 
   console.log('user object: ', user);

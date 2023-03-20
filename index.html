@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sign Up Today</h1>
+        <h1>Sign Up Today!</h1>
         <form id="form">
             <div class="form-group">
                 <label for="name">Full Name</label>
@@ -29,14 +29,15 @@
                 <input type="url" name="website" id="website" placeholder="https://modern.design" required>
             </div>
             <div class="form-group">
-                <label for="pwd1">Password</label>
-                <input type="password" name="" id="pwd1" placeholder="Create Password (Min. 8 characters)" 
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Create Password (Min. 8 characters)" 
                 required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
                 title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number.">
             </div>
             <div class="form-group">
-                <label for="pwd2">Confirm Password</label>
-                <input type="password" name="" id="pwd2" placeholder="confirm password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm Password"
+                required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$" name="password">
             </div>
 
             <button type="submit">Register</button>
