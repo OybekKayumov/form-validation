@@ -15,6 +15,8 @@ function validateForm() {
     message.textContent = 'Please fill out all fields.'
     message.style.color = 'red';
     messageContainer.style.borderColor = 'red';
+    
+    return;
   }
 
   if (pwd1El.value === pwd2El.value) {
@@ -28,7 +30,26 @@ function validateForm() {
     messageContainer.style.borderColor = 'red';
     pwd1El.style.borderColor = 'red';
     pwd2El.style.borderColor = 'red';
+
+    return;
   }
+
+  if (isValid && passwordsMatch) {
+    message.textContent = 'Successfully Registered!'
+    message.style.color = 'lime';
+    messageContainer.style.borderColor = 'lime';
+  } 
+}
+
+function storeFormData() {
+  const user = {
+    name: form.name.value,
+    phone: form.phone.value,
+    website: form.website.value,
+    password: form.password.value,
+  }
+
+  console.log('user object: ', user);
 }
 
 function processFormData(e) {
@@ -36,6 +57,11 @@ function processFormData(e) {
 
   // validate form
   validateForm();
+
+  // submit data if valid
+  if (isValid && passwordsMatch) {
+    storeFormData();
+  }
 }
 
 form.addEventListener('submit', processFormData);
